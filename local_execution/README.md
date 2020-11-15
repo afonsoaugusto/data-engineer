@@ -33,7 +33,7 @@ A url de acesso e o token estarão disponiveis no log do docker-compose.
 ## Rodando utilizando o devcontainer do VSCode
 
 Utilizando a opção _devcontainer_ do VSCode o mesmo irá executar o _docker-compose_.
-Porém ele não irá executar o Jupyter Notebook devido o dockerfile estar usando a diretiva _CMD_ ao inves do **ENTRYPOINT**.
+Porém ele não irá executar o Jupyter Notebook devido o dockerfile estar usando a diretiva _CMD_ ao inves do _ENTRYPOINT_.
 
 Os laboratórios locais foram desenvolvidos utilizando os notebooks do jupyter.
 
