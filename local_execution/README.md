@@ -17,7 +17,7 @@ No meu ambiente estou rodando com as seguintes versões
   - docker-compose version 1.26.2, build eefe0d31
   - docker-py version: 4.2.2
   - CPython version: 3.7.7
-  - OpenSSL version: OpenSSL 1.1.0l  10 Sep 2019
+  - OpenSSL version: OpenSSL 1.1.0l 10 Sep 2019
 
 ## Portas e URL
 
@@ -27,13 +27,13 @@ No meu ambiente estou rodando com as seguintes versões
 
 ## Rodando com docker-compose
 
-Utilizando o comando `docker-compose up` no diretório *local_execution* você terá acesso ao cluster spark e ao container rodando o jupyter notebook.
+Utilizando o comando `docker-compose up` no diretório _local_execution_ você terá acesso ao cluster spark e ao container rodando o jupyter notebook.
 A url de acesso e o token estarão disponiveis no log do docker-compose.
 
 ## Rodando utilizando o devcontainer do VSCode
 
-Utilizando a opção *devcontainer* do VSCode o mesmo irá executar o *docker-compose*.
-Porém ele não irá executar o Jupyter Notebook devido o dockerfile estar usando a diretiva *CMD* ao inves do **ENTRYPOINT**.
+Utilizando a opção _devcontainer_ do VSCode o mesmo irá executar o _docker-compose_.
+Porém ele não irá executar o Jupyter Notebook devido o dockerfile estar usando a diretiva _CMD_ ao inves do **ENTRYPOINT**.
 
 Os laboratórios locais foram desenvolvidos utilizando os notebooks do jupyter.
 
@@ -47,6 +47,6 @@ bash entrypoint-jupyter.sh
 
 No arquivo [docker-compose.yml](./docker-compose.yml) foram definidos três volumes de referencia no service python3.
 
-- **/config** para o arquivo *types_mapping.json* que define o mapeamento de conversão de dados.
+- **/config** para o arquivo _types_mapping.json_ que define o mapeamento de conversão de dados.
 - **/data** para os arqivos do desafio ficarem isolados
 - **/workspace/project** para ter uma visão do projeto como todo
