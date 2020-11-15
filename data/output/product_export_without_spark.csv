@@ -1,0 +1,4 @@
+id,name,email,phone,address,age,create_date,update_date
+2,sherlock.holmes@cognitivo.ai,Sherlock Holmes,(11) 94815-1623,"221B Baker Street, London, UK",34,1524342084364752000,1524342084364752000
+3,spongebob.squarepants@cognitivo.ai,Spongebob Squarepants,(11) 98765-4321,"122 Conch Street, Bikini Bottom, Pacific Ocean",13,1526702826854752000,1526706487964752000
+1,david.lynch@cognitivo.ai,David Lynch,(11) 99999-9999,"Mulholland Drive, Los Angeles, CA, US",72,1520102821954752000,1527070439594752000

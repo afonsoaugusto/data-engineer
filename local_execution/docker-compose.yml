@@ -1,17 +1,20 @@
-version: '3'
+version: "3"
 
 services:
   python3:
     build: .
 
     volumes:
+      - ../config:/config
       - ../data:/data
       - ../:/workspace/project
     ports:
-      - '8888:8888'      
+      - "8888:8888"
+    networks:
+      - spark
 
   spark:
-    image: docker.io/bitnami/spark:3-debian-10
+    image: docker.io/bitnami/spark:3.0.1
     environment:
       - SPARK_MODE=master
       - SPARK_RPC_AUTHENTICATION_ENABLED=no
@@ -19,12 +22,12 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
     ports:
-      - '8080:8080'
+      - "8080:8080"
     networks:
       - spark
 
   spark-worker-1:
-    image: docker.io/bitnami/spark:3-debian-10
+    image: docker.io/bitnami/spark:3.0.1
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -38,7 +41,7 @@ services:
       - spark
 
   spark-worker-2:
-    image: docker.io/bitnami/spark:3-debian-10
+    image: docker.io/bitnami/spark:3.0.1
     environment:
       - SPARK_MODE=worker
       - SPARK_MASTER_URL=spark://spark:7077
@@ -49,7 +52,7 @@ services:
       - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
       - SPARK_SSL_ENABLED=no
     networks:
-      - spark      
+      - spark
 
 networks:
-  spark:      
+  spark:
