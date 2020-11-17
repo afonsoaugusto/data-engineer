@@ -50,3 +50,17 @@ No arquivo [docker-compose.yml](./docker-compose.yml) foram definidos três volu
 - **/config** para o arquivo _types_mapping.json_ que define o mapeamento de conversão de dados.
 - **/data** para os arqivos do desafio ficarem isolados
 - **/workspace/project** para ter uma visão do projeto como todo
+
+## Documentações que foram importantes
+
+* [spark.apache.org/docs/api/python/pyspark.sql](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html)
+
+
+## TODO
+
+Durante a execução local eu não iniciei um hdfs para ser utilizado.
+Devido a este fato eu uso o pandas para carregar o csv e apartir dele eu crio o objeto no pyspark.
+
+Para salvar o arquivo eu estava fazendo o metodo de tranformar para um dataframe pandas e dele salvar no S.O.
+Porém neste metodo existe uma perda de informação na conversão dos dados para o timestamp.
+Como o meu objetivo é a execução em Cloud, vou deixar este *TODO* neste projeto.
