@@ -67,6 +67,7 @@ Para uma escolha mais assertiva de um formato do arquivo é necessário tem uma 
 ### Teste local
 
 Foi criado o diretório [local_execution](local_execution/) com intuito de iniciar no projeto e validar algumas operações antes de rodar na Cloud.
+
 Dentro deste diretório existe um [README.md](local_execution/README.md) explicando com executar o mesmo.
 
 ### Escolha da plataform a ser utilizada - Databricks
