@@ -64,25 +64,27 @@ Porém o formato Parquet tem um melhor suporte ao Spark diretamente conforme apr
 
 Para uma escolha mais assertiva de um formato do arquivo é necessário tem uma visão mais ampla de como será
 
-### Teste local
+### Solução
+
+#### Teste local
 
 Foi criado o diretório [local_execution](local_execution/) com intuito de iniciar no projeto e validar algumas operações antes de rodar na Cloud.
 
 Dentro deste diretório existe um [README.md](local_execution/README.md) explicando com executar o mesmo.
 
-### Escolha da plataform a ser utilizada - AWS Glue
+#### Escolha da plataform a ser utilizada - AWS Glue
 
 A plataforma que foi escolhida pela sua simplicidade de operação, visto que o problema apresentado é simples.
 
-### O projeto [aws-glue-csv-parquet]()
+#### O projeto [aws-glue-csv-parquet](https://github.com/afonsoaugusto/aws-glue-csv-parquet/tree/main)
 
-O projeto [aws-glue-csv-parquet]() é a minha solução para este problema. Foi escolhido ser feito em um repositório separado para simplificar o pipeline.
+O projeto [aws-glue-csv-parquet](https://github.com/afonsoaugusto/aws-glue-csv-parquet/tree/main) é a minha solução para este problema. Foi escolhido ser feito em um repositório separado para simplificar o pipeline.
 A estrutura e a definição da solução deste projeto é feita no submodulo do mesmo.
 
-#### Adicionando submodulo
+##### Adicionando submodulo
 
 `git submodule add git@github.com:afonsoaugusto/aws-glue-csv-parquet.git`
 
-#### Atualizando submodulo
+##### Atualizando submodulo
 
 `git submodule update --init --recursive`
