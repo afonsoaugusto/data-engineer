@@ -70,8 +70,19 @@ Foi criado o diretório [local_execution](local_execution/) com intuito de inici
 
 Dentro deste diretório existe um [README.md](local_execution/README.md) explicando com executar o mesmo.
 
-### Escolha da plataform a ser utilizada - Databricks
+### Escolha da plataform a ser utilizada - AWS Glue
 
-A plataforma que foi escolhida pela sua simplicidade de operação, visto que o problema apresentado é simples, e pelo Databricks Community que e gratuito para utilização.
+A plataforma que foi escolhida pela sua simplicidade de operação, visto que o problema apresentado é simples.
 
-Também poderia ser utilizado uma solução local rodando o spark a partir de um [docker](https://hub.docker.com/r/bitnami/spark/), porém na interface do Databricks a reprodução é mais simples.
+### O projeto [aws-glue-csv-parquet]()
+
+O projeto [aws-glue-csv-parquet]() é a minha solução para este problema. Foi escolhido ser feito em um repositório separado para simplificar o pipeline.
+A estrutura e a definição da solução deste projeto é feita no submodulo do mesmo.
+
+#### Adicionando submodulo
+
+`git submodule add git@github.com:afonsoaugusto/aws-glue-csv-parquet.git`
+
+#### Atualizando submodulo
+
+`git submodule update --init --recursive`

@@ -3,7 +3,9 @@
 ## Testes locais antes da automação na CLOUD.
 
     Antes de automatizar em alguma solução para CLOUD, eu preferi executar localmente todo o processo.
-    Assim deixei automatizado
+    Assim deixei automatizado com Docker e Docker-compose.
+
+    Para fins de teste eu não adicionei um cluster Hadoop para ter um HDFS.
 
 ## Requerimentos
 
@@ -55,10 +57,14 @@ No arquivo [docker-compose.yml](./docker-compose.yml) foram definidos três volu
 
 * [spark.apache.org/docs/api/python/pyspark.sql](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html)
 
-
 ## TODO
 
-Durante a execução local eu não iniciei um hdfs para ser utilizado.
+Durante a execução local eu não iniciei um cluster Hadoop para ter *hdfs* para ser utilizado.
+
+Na [documentação](https://spark.apache.org/docs/latest/api/python/pyspark.sql.html?highlight=save#pyspark.sql.DataFrameWriter.parquet) é explicito que o path tem que ser uma estrutura que suporta Hadoop file system.
+
+`path – the path in any Hadoop supported file system`
+
 Devido a este fato eu uso o pandas para carregar o csv e apartir dele eu crio o objeto no pyspark.
 
 Para salvar o arquivo eu estava fazendo o metodo de tranformar para um dataframe pandas e dele salvar no S.O.

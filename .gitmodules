@@ -1,0 +1,3 @@
+[submodule "aws-glue-csv-parquet"]
+	path = aws-glue-csv-parquet
+	url = git@github.com:afonsoaugusto/aws-glue-csv-parquet.git
