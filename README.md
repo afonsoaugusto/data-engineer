@@ -59,7 +59,7 @@ Já as soluções [Apache Hive](https://hive.apache.org/) (preferido para [Batch
 
 No nosso caso de referencia que é somente o processamento do arquivo CSV para Colunar utilizando Spark, o mesmo também suporta ambas as opções [ORC](https://spark.apache.org/docs/latest/sql-data-sources-orc.html), [Parquet](https://spark.apache.org/docs/latest/sql-data-sources-parquet.html)
 
-Ambos os formatos seriam boas escolhas visando suporte das plataformas e soluções. Ambos também tem uma boa performance considerando o ["Benchmarking PARQUET vs ORC"] (https://medium.com/@dhareshwarganesh/benchmarking-parquet-vs-orc-d52c39849aef) realizado por Dhareshwarganesh.
+Ambos os formatos seriam boas escolhas visando suporte das plataformas e soluções. Ambos também tem uma boa performance considerando o ["Benchmarking PARQUET vs ORC"](https://medium.com/@dhareshwarganesh/benchmarking-parquet-vs-orc-d52c39849aef) realizado por Dhareshwarganesh.
 Porém o formato Parquet tem um melhor suporte ao Spark diretamente conforme apresentado pelo Xinran Waibel no [towardsdatascience](https://towardsdatascience.com/demystify-hadoop-data-formats-avro-orc-and-parquet-e428709cf3bb).
 
 Para uma escolha mais assertiva de um formato do arquivo é necessário tem uma visão mais ampla de como será
@@ -71,6 +71,8 @@ Para uma escolha mais assertiva de um formato do arquivo é necessário tem uma 
 Foi criado o diretório [local_execution](local_execution/) com intuito de iniciar no projeto e validar algumas operações antes de rodar na Cloud.
 
 Dentro deste diretório existe um [README.md](local_execution/README.md) explicando com executar o mesmo.
+
+A solução local não está completamente implementada, mas achei valido permanecer com este componente no projeto para consultas de futura melhoria.
 
 #### Escolha da plataform a ser utilizada - AWS Glue
 
