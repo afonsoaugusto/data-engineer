@@ -51,9 +51,9 @@ Ambos os formatos (ORC, Parquet) são altamente utilizados e conhecidos.
 
 - Para as soluções de DW
   - BigQuery (GCP -> [ORC](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-orc), [Parquet](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-parquet))
-  - Redshift (AWS -> [ORC](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/copy-parameters-data-format.html#copy-orc), [Parquet](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/copy-parameters-data-format.html#copy-parquet)) suportam ambos os formatos.
+  - Redshift (AWS -> [ORC](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/copy-parameters-data-format.html#copy-orc), [Parquet](https://docs.aws.amazon.com/pt_br/redshift/latest/dg/copy-parameters-data-format.html#copy-parquet))
 
-A soluções [Glue](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) para ETL e Apache Flink como mecanismo de streaming de dados [ORC](https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/table/connectors/formats/orc.html) e [Parquet](https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/table/connectors/formats/parquet.html), suportam ambos os formatos de arquivo.
+As soluções [Glue](https://docs.aws.amazon.com/glue/latest/dg/add-job.html) para ETL e Apache Flink como mecanismo de streaming de dados [ORC](https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/table/connectors/formats/orc.html) e [Parquet](https://ci.apache.org/projects/flink/flink-docs-release-1.11/dev/table/connectors/formats/parquet.html), suportam ambos os formatos de arquivo.
 
 Já as soluções [Apache Hive](https://hive.apache.org/) (preferido para [Batch processing](https://www.simplilearn.com/basics-of-hive-and-impala-tutorial)) e [Apache Impala](https://impala.apache.org/) (preferido para [ad hoc queries](https://www.simplilearn.com/basics-of-hive-and-impala-tutorial)) suportam ambos os formatos, porém o [formato recomendado](https://docs.cloudera.com/runtime/7.1.2/using-hiveql/topics/hive-orc-parquet-compare.html) é Orc para o Hive e o Parquet para o Impala.
 
@@ -78,10 +78,13 @@ A solução local não está completamente implementada, mas achei valido perman
 
 A plataforma que foi escolhida pela sua simplicidade de operação, visto que o problema apresentado é simples.
 
+Também considerei o custo para execução na cloud, para este projeto foi gasto $0,26 para o Glue e para o S3 eu permaneci dentro do free tier.
+
 #### O projeto [aws-glue-csv-parquet](https://github.com/afonsoaugusto/aws-glue-csv-parquet/tree/main)
 
 O projeto [aws-glue-csv-parquet](https://github.com/afonsoaugusto/aws-glue-csv-parquet/tree/main) é a minha solução para este problema. Foi escolhido ser feito em um repositório separado para simplificar o pipeline.
-A estrutura e a definição da solução deste projeto é feita no submodulo do mesmo.
+
+*A estrutura, definição e a descrição da solução deste projeto é feita no submodulo do mesmo.*
 
 ##### Adicionando submodulo
 
